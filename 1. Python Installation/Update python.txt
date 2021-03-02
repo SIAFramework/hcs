@@ -1,0 +1,13 @@
+Update Python
+conda update conda
+
+conda update python
+
+conda create -n py35 python=3.5 anaconda
+
+
+Install wordcloud library
+* Install Microsoft Visual C++ build tools
+* Install Microsoft Visual C++
+* In Anaconda prompt run pip install wordcloud
+* 

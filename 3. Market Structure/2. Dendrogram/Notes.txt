@@ -1,0 +1,17 @@
+
+# Questions:
+1. What is upcs are named as? Description or Name?
+2. 
+
+
+
+# Text-Generation(Generative Model) with LSTM recurrent NN in Python using Keras
+https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/
+
+
+# Skeleton/Scope of the Dendrogram enhancements
+1. Collect the data from the source/team
+2. Enlist all attributes required for the Dendrogram
+3. Determine the attributes(significant) based on the pre-defined rules/conditions prior plotting the dendrogram: Pruning attributes
+4. Plot the dendrogram for only those prunned attributes
+5. Name the nodes based on the characteristics of the attributes for the respective items responsible for that Node creation. Ideally, determine those attributes(Names) with conditions/rules like with more than 50% share or max share from the respective items

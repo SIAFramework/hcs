@@ -1,0 +1,168 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\WINDOWS\system32>tracert 192.30.253.112
+
+Tracing route to 192.30.253.112 over a maximum of 30 hops
+
+  1     *        *        *     Request timed out.
+  2     *        *        *     Request timed out.
+  3     *        *        *     Request timed out.
+  4     *        *        *     Request timed out.
+  5     *        *        *     Request timed out.
+  6     *        *        *     Request timed out.
+  7     *        *        *     Request timed out.
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10     *        *        *     Request timed out.
+ 11     *        *        *     Request timed out.
+ 12     *        *        *     Request timed out.
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *        *        *     Request timed out.
+ 28     *        *        *     Request timed out.
+ 29     *        *        *     Request timed out.
+ 30     *        *        *     Request timed out.
+
+Trace complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C:\WINDOWS\system32>ipconfig/all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : HIBACL61442
+   Primary Dns Suffix  . . . . . . . : ad.harman.com
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : ad.harman.com
+                                       hbi.ad.harman.com
+                                       hsg.ad.harman.com
+                                       hmg.ad.harman.com
+                                       usnr.ad.harman.com
+                                       akg.ad.harman.com
+                                       crown.ad.harman.com
+                                       hoem.ad.harman.com
+                                       web.harman.com
+                                       redbend.com
+                                       symphonyteleca.com
+                                       ibs.net
+                                       ibsab.com
+
+Ethernet adapter Local Area Connection 2:
+
+   Connection-specific DNS Suffix  . : ad.harman.com
+   Description . . . . . . . . . . . : Cisco AnyConnect Secure Mobility Client V
+irtual Miniport Adapter for Windows x64
+   Physical Address. . . . . . . . . : 00-05-9A-3C-7A-00
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::98b7:714b:86b1:dea3%13(Preferred)
+   IPv4 Address. . . . . . . . . . . : 10.99.76.163(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.99.76.1
+   DHCPv6 IAID . . . . . . . . . . . : 402654618
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-20-64-10-CE-A0-8C-FD-2C-1A-2A
+
+   DNS Servers . . . . . . . . . . . : 10.99.2.3
+                                       10.99.2.4
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Wireless Network Connection:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Intel(R) Dual Band Wireless-AC 8260
+   Physical Address. . . . . . . . . : 44-85-00-CD-BF-27
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2405:204:508e:f10a:7021:5198:df36:af6f(Pr
+eferred)
+   Temporary IPv6 Address. . . . . . : 2405:204:508e:f10a:75da:7462:9150:c2a3(Pr
+eferred)
+   Link-local IPv6 Address . . . . . : fe80::7021:5198:df36:af6f%12(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.43.174(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Wednesday, March 29, 2017 1:25:20 PM
+   Lease Expires . . . . . . . . . . : Wednesday, March 29, 2017 4:09:36 PM
+   Default Gateway . . . . . . . . . : fe80::b1b5:429f:796a:dabe%12
+                                       192.168.43.1
+   DHCP Server . . . . . . . . . . . : 192.168.43.1
+   DHCPv6 IAID . . . . . . . . . . . : 222594304
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-20-64-10-CE-A0-8C-FD-2C-1A-2A
+
+   DNS Servers . . . . . . . . . . . : 2405:200:800::1
+                                       192.168.43.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Local Area Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   Physical Address. . . . . . . . . : A0-8C-FD-2C-1A-2A
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{006889A6-58B6-42BD-8C02-9BCA582DF910}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter Teredo Tunneling Pseudo-Interface:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{78C09B9C-1B29-4EA4-A21A-EAFBC63E50A2}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.ad.harman.com:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : ad.harman.com
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+C:\WINDOWS\system32>

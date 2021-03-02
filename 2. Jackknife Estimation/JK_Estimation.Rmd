@@ -1,0 +1,31 @@
+---
+title: "Jackknife Estimation"
+output: html_notebook
+---
+
+```{r,echo=FALSE,warning=FALSE}
+# Generate some pseudo values
+x <-c(8.26, 6.33, 10.4, 5.27, 5.35, 5.61, 6.12, 6.19, 5.2,.01, 
+      8.74, 7.78, 7.02, 6, 6.5, 5.8, 5.12, 7.41, 6.52, 6.21,12.28, 5.6, 5.38, 6.6, 8.74)
+
+# Calculate Coefficient of Variation
+CV <- function(x){
+  sqrt(var(x)/mean(x))
+}
+
+CV(x)
+
+# Generate a bootstrap sample
+set.seed(1234)
+CV(sample(x,replace = T))
+
+set.seed(1255)
+x <- rnorm(50)
+theta <- function(x){
+  mean(x)
+}
+
+library(bootstrap)
+results <- jackknife(x, theta)
+```
+

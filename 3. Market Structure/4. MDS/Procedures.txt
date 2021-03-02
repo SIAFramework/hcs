@@ -1,0 +1,54 @@
+Step-by-step procedures (Version 1)
+
+1. Replace NaN(diagonal) elements by -1
+2. Replace zero's(off diagonal elements) by 1
+3. Divide 100 by all elements i.e, 100/index
+
+***4. Replace values >3.33(Acceptance creteria 2) by 1 & retain missing values/zero values(100) as is. Assume values which are 100's are missing values. Acceptance creteria 1.
+
+5. Inverse the data
+6. Fill diagonal elements by zero
+7. Determine the distance values
+8. Multiply by 100 to make the distance values scattered
+9. Calculate X Y Coordinates by calling function which does 'Classical multidimensional scaling'
+10. Calculate r_sqaured & F-values
+11. Divide back F-value by 100(from point 8)
+
+
+
+Step-by-step procedures (Version 2)
+
+1. Replace NaN(diagonal) elements by -1
+2. Replace zero’s (off diagonal elements) by 100
+3. Divide (values which are not 100)100 by all elements i.e, 100/index
+
+***4. Replace values (not values which are 100) >3.33(Acceptance criteria 2) by 100 & retain missing values/zero values(100) as is. Assume values which are 100's are missing values. Acceptance creteria 1.
+
+5. Inverse the data
+6. Fill diagonal elements by zero
+7. Determine the distance values
+8. Multiply by 100 to make the distance values scattered
+9. Calculate X Y Coordinates by calling function which does 'Classical multidimensional scaling'
+10. Calculate r_sqaured & F-values
+11. Divide back F-value by 100(from point 8)
+
+
+
+Step-by-step procedures (Version 3)
+
+1. Replace NaN(diagonal) elements by -1
+2. Replace zero’s (off diagonal elements) by Null
+3. Divide 100 by all elements i.e, 100/index
+
+***4. Replace values >3.33(Acceptance criteria 2) by Null & retain missing values/zero values(NaN) as is. 
+
+5. Inverse the data
+6. Fill diagonal elements by zero
+7. Determine the distance values
+8. Multiply by 100 to make the distance values scattered
+9. Calculate X Y Coordinates by calling function which does 'Classical multidimensional scaling'
+10. Calculate r_sqaured & F-values
+11. Divide back F-value by 100(from point 8)
+
+
+

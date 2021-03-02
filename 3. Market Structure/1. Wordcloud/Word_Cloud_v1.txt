@@ -1,0 +1,43 @@
+#######################################################################
+## Wordcloud code
+## Author: Yashwanth M R (yashwanth.ramachandra@harman.com)
+## Created on: 24/03/2017
+## Latest Modified Date: 31/03/2017 by yashwanth.ramachandra@harman.com
+## Version 1
+#######################################################################
+
+# Import libraries
+import wordcloud as wc
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as mplt
+
+# Import dataset
+Other_groups = pd.read_csv('D:/3. Market Structure/1. WordCloud/WC_OtherGroups.csv')
+print(Other_groups.head(5))
+
+# Aggregate data
+Other_groups_aggr = Other_groups.groupby(['Attribute_values']).sum().reset_index()
+Other_groups_aggr = Other_groups_aggr.sort_values(['buyers_count'],ascending = False)
+print(type(Other_groups_aggr))
+print(Other_groups_aggr.head(5))
+
+
+# Remove zero buyers_counts
+Other_groups_aggr = Other_groups_aggr.query('buyers_count > 0')
+Other_groups_aggr = Other_groups_aggr.sort_values(by = 'buyers_count', ascending=False)
+print(Other_groups_aggr.tail(5))
+print(Other_groups_aggr.shape)
+
+
+# Convert dataframe to class dict
+from collections import defaultdict
+Other_groups_aggr_dict = Other_groups_aggr.set_index('Attribute_values')['buyers_count'].to_dict()
+word_cloud = wc.WordCloud(background_color='white',
+                          width=1200,
+                          height=1000).generate_from_frequencies(Other_groups_aggr_dict)
+mplt.figure()
+mplt.imshow(word_cloud)
+mplt.axis("off")
+mplt.show()
+    

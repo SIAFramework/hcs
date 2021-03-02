@@ -1,0 +1,9 @@
+1. Install .whl package for Wordcloud. > pip install wordcloud-1.5.0-cp36-cp36m-win_amd64.whl
+2. Ensure package folder are resided in "/lib/site-packages/"
+3. update pandas package using conda
+4. change "stop.add()" to "stop.append()" in the code
+5. replace "SS_...." to "Rfg_SD_df_NZ" in,
+	Rfg_SD_df_Small = Rfg_SD_df_NZ[(Rfg_SD_df_NZ['Trans_Share']>=P1) &  (Rfg_SD_df_NZ['Trans_Share']<=P33)]
+	Rfg_SD_df_Medium = Rfg_SD_df_NZ[(Rfg_SD_df_NZ['Trans_Share']>=P34) &  (Rfg_SD_df_NZ['Trans_Share']<=P66)]
+	Rfg_SD_df_High = Rfg_SD_df_NZ[(Rfg_SD_df_NZ['Trans_Share']>=P67) &  (Rfg_SD_df_NZ['Trans_Share']<=P100)]
+6. Add "Rfg_SD_df_NZ.index = range(0,len(Rfg_SD_df_NZ))" after the step "Rfg_SD_df_NZ = Rfg_SD_df.query('Trans_Share>0')"

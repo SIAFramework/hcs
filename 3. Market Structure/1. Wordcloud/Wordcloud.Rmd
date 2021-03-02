@@ -1,0 +1,79 @@
+---
+title: "Market Structure on Demand"
+output: html_notebook
+---
+
+###  Wordcloud [Reference](http://www.sthda.com/english/wiki/text-mining-and-word-cloud-fundamentals-in-r-5-simple-steps-you-should-know)
+```{r, echo=FALSE,warning=FALSE}
+# Import termdocument matrix
+Other_Groups <- read.csv("D:/3. Market Structure/1. WordCloud/1. Input files/WC_OtherGroups.csv", header = TRUE)
+Other_Groups$X <- NULL
+
+# Aggregate data
+library(data.table)
+Other_Groups <- data.table(Other_Groups)
+Other_Groups_Aggr <- Other_Groups[,.(count.Sum=sum(count)), by = Attribute_values]
+
+# Remove cases where count is Zero
+#setDT(Other_Groups_Aggr)[, .SD[!any(.SD[, -1, with = F] == 0)], by = Attribute_values]
+Other_Groups_Aggr <- data.frame(Other_Groups_Aggr)
+
+# Sort data
+Other_Groups_Aggr$Attribute_values <- as.character(Other_Groups_Aggr$Attribute_values)
+Other_Groups_Aggr <- Other_Groups_Aggr[order(Other_Groups_Aggr$count.Sum, decreasing = TRUE),]
+
+# wordcloud
+library(wordcloud)
+set.seed(1234)
+wordcloud(words = Other_Groups_Aggr$Attribute_values, freq = Other_Groups_Aggr$count.Sum, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
+```
+
+
+```{r, echo=FALSE,warning=FALSE}
+# https://www.analyticsvidhya.com/blog/2014/05/build-word-cloud-text-mining-tools/
+library(wordcloud)
+library(tm)
+library(SnowballC)
+```
+
+```{r,echo=FALSE,warning=FALSE}
+# Load the text
+text <- readLines("D:/3. Market Structure/1. WordCloud/WordCloud.txt")
+
+# Load the data as corpus
+docs <- Corpus(VectorSource(text))
+
+# Inspect the content of the document
+inspect(docs)
+
+# Cleaning the text
+toSpace <- content_transformer(function(x, pattern) gsub(pattern, " ",x))
+docs <- tm_map(docs, toSpace, "/")
+docs <- tm_map(docs, toSpace, "@")
+docs <- tm_map(docs, toSpace, "\\|")
+
+# Convert the text to lower case
+docs <- tm_map(docs, content_transformer(tolower))
+
+# Remove numbers
+docs <- tm_map(docs, removeNumbers)
+
+# Remove english common stopwords
+docs <- tm_map(docs, removeWords, stopwords("english"))
+
+# Remove your own stop word
+# specify your stopwords as a character vector
+docs <- tm_map(docs, removeWords, c("blabla1", "blabla2")) 
+
+# Remove punctuations
+docs <- tm_map(docs, removePunctuation)
+
+# Eliminate extra white spaces
+docs <- tm_map(docs, stripWhitespace)
+
+# Text stemming
+docs <- tm_map(docs, stemDocument)
+```
+
